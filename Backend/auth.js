@@ -1,5 +1,5 @@
 // ================= AUTH UTILITIES =================
-const API_BASE_URL = "https://YOUR-BACKEND.onrender.com"; // 🔴 CHANGE THIS
+const API_BASE_URL = "https://ecodrive-backend.onrender.com/"; // 🔴 CHANGE THIS
 
 const authUtils = {
   // ---------------- CHECK AUTH ----------------
