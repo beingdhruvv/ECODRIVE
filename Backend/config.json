@@ -1,0 +1,19 @@
+{
+  "host": "localhost",
+  "user": "root",
+  "password": "",
+  "database": "eco_drive",
+
+  "server": {
+    "mode": "development"
+  },
+
+  "jwt": {
+    "expiresIn": "24h"
+  },
+
+  "email": {
+    "host": "smtp.gmail.com",
+    "port": 587
+  }
+}
