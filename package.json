@@ -1,0 +1,37 @@
+{
+  "name": "eco-drive",
+  "version": "1.0.0",
+  "description": "A sustainable car rental platform",
+  "main": "Backend/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon Backend/server.js",
+    "test": "jest",
+    "build": "webpack --mode production",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "author": "Dev Patel",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
