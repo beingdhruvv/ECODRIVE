@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - EcoDrive</title>
+    
+    <!-- External CSS - Main stylesheet -->
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <!-- External CSS - Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="../Backend/auth.js" defer></script>
+    
+    <!-- Internal CSS - Page-specific styles -->
+    <style>
+        /* Profile page specific styles */
+        .profile-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            padding: 40px 20px;
+        }
+
+        /* Profile container styles */
+        .profile-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Profile header styles */
+        .profile-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #00c896 0%, #4d7cff 100%);
+            color: white;
+            position: relative;
+        }
+
+        .profile-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00c896, #4d7cff);
+        }
+
+        .profile-content {
+            padding: 40px;
+            background: white;
+        }
+
+        .info-group {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 12px;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .info-group:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-color: #00c896;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #4d7cff;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-value {
+            color: #333;
+            font-size: 1.2em;
+            padding: 5px 0;
+        }
+
+        .logout-btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            margin-top: 40px;
+            background: linear-gradient(135deg, #00c896 0%, #4d7cff 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logout-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .logout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .logout-btn:hover::before {
+            left: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .profile-container {
+                margin: 20px;
+            }
+
+            .profile-header h1 {
+                font-size: 2em;
+            }
+
+            .profile-content {
+                padding: 20px;
+            }
+
+            .info-group {
+                padding: 15px;
+            }
+
+            .logout-btn {
+                padding: 15px;
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-header h1 {
+                font-size: 1.8em;
+            }
+
+            .info-label {
+                font-size: 1em;
+            }
+
+            .info-value {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">EcoDrive</div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="/views/index.html">Home</a></li>
+            <li><a href="/views/about.html">About Us</a></li>
+            <li><a href="/views/vehicles.html">EV & PHEV</a></li>
+            <li><a href="/views/profile.html" class="active">Profile</a></li>
+            <li><a href="/views/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="profile-page">
+        <div class="profile-container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <h1>Welcome, <span id="profile-name">User</span>!</h1>
+            </div>
+            
+            <!-- Profile Content -->
+            <div class="profile-content">
+                <!-- Info Group with Inline CSS -->
+                <div class="info-group" style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e9ecef;">
+                    <div class="info-label" style="color: #4d7cff; font-weight: 600; margin-bottom: 10px;">Full Name</div>
+                    <div class="info-value" id="fullname" style="font-size: 1.2em; color: #333;">Loading...</div>
+                </div>
+                
+                <!-- Other info groups using internal CSS -->
+                <div class="info-group">
+                    <div class="info-label">Email</div>
+                    <div class="info-value" id="email">Loading...</div>
+                </div>
+                <div class="info-group">
+                    <div class="info-label">Member Since</div>
+                    <div class="info-value" id="created-at">Loading...</div>
+                </div>
+                
+                <!-- Logout Button -->
+                <button id="logoutBtn" class="logout-btn">
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <section class="footer-section">
+                <h4>EcoDrive</h4>
+                <p>Driving towards a sustainable future</p>
+            </section>
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/views/about.html">About Us</a></li>
+                    <li><a href="/views/vehicles.html">Vehicles</a></li>
+                    <li><a href="/views/contact.html">Contact</a></li>
+                </ul>
+            </section>
+            <section class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Visit our Facebook page"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 EcoDrive. All rights reserved by Dev Patel.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="../Backend/script.js" defer></script>
+    <!-- Profile page specific JavaScript -->
+    <script>
+        // Profile page initialization and event handling
+        window.onload = function() {
+            // Authentication check and user data loading
+            const { isLoggedIn, user } = authUtils.checkAuth();
+            
+            // Redirect logic
+            if (!isLoggedIn) {
+                window.location.replace('/views/login.html');
+                return;
+            }
+
+            // User data population
+            if (user) {
+                // Update profile information
+                document.getElementById('profile-name').textContent = user.fullname || user.name || 'User';
+                document.getElementById('fullname').textContent = user.fullname || user.name || 'Not set';
+                document.getElementById('email').textContent = user.email || 'Not set';
+                document.getElementById('created-at').textContent = user.created_at ? 
+                    new Date(user.created_at).toLocaleDateString() : 'Not available';
+            }
+
+            // Logout button event listener
+            const logoutBtn = document.getElementById('logoutBtn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (confirm('Are you sure you want to logout?')) {
+                        authUtils.logout();
+                    }
+                });
+            }
+        };
+
+        // Profile form submission handling
+        document.getElementById('profileForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                currentPassword: document.getElementById('currentPassword').value,
+                newPassword: document.getElementById('newPassword').value
+            };
+
+            const result = await authUtils.updateProfile(formData);
+            if (result.success) {
+                alert('Profile updated successfully!');
+            } else {
+                alert(result.error || 'Failed to update profile. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html> 

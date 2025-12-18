@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV & PHEV Vehicles - EcoDrive</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="../Backend/auth.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">EcoDrive</div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="/views/index.html">Home</a></li>
+            <li><a href="/views/about.html">About Us</a></li>
+            <li><a href="/views/vehicles.html" class="active">EV & PHEV</a></li>
+            <li><a href="/views/login.html">Login</a></li>
+            <li><a href="/views/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="vehicles-page">
+        <section class="vehicle-types">
+            <h1>Electric & Hybrid Vehicles Guide</h1>
+            
+            <div class="vehicle-category">
+                <h2>Battery Electric Vehicles (BEV)</h2>
+                <div class="vehicle-info">
+                    <div class="info-text">
+                        <p>100% electric vehicles powered solely by batteries. Zero emissions, quiet operation, and lowest running costs.</p>
+                        <ul class="benefits-list">
+                            <li>Zero direct emissions</li>
+                            <li>Lower maintenance costs</li>
+                            <li>Quiet and smooth operation</li>
+                            <li>Instant torque for better acceleration</li>
+                        </ul>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800" alt="Electric Vehicle" class="vehicle-image">
+                </div>
+            </div>
+
+            <div class="manufacturer-comparison">
+                <h2>Leading EV Manufacturers</h2>
+                <div class="comparison-grid">
+                    <div class="manufacturer-card">
+                        <img src="https://images.unsplash.com/photo-1571987502227-9231b837d92a?auto=format&fit=crop&w=800" alt="Tesla Vehicle" class="manufacturer-image">
+                        <h3>Tesla</h3>
+                        <p>Known for cutting-edge technology and long-range electric vehicles. Features a clean, modern design with high-quality visuals and comprehensive vehicle configuration tools.</p>
+                        <a href="https://www.tesla.com" target="_blank" rel="noopener noreferrer" class="manufacturer-link">Visit Website</a>
+                    </div>
+
+                    <div class="manufacturer-card">
+                        <img src="https://images.unsplash.com/flagged/photo-1553505192-acca7d4509be?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Qk1XfGVufDB8fDB8fHww" alt="BMW Electric Vehicle" class="manufacturer-image">
+                        <h3>BMW</h3>
+                        <p>Combines luxury with sustainability. Offers detailed vehicle specifications and a sophisticated, user-friendly design with comprehensive configuration options with good features and support.</p>
+                        <a href="https://www.bmw.co.uk" target="_blank" rel="noopener noreferrer" class="manufacturer-link">Visit Website</a>
+                    </div>
+
+                    <div class="manufacturer-card">
+                        <img src="https://images.unsplash.com/photo-1619795079867-362a67e20a91?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9sZXN0YXJ8ZW58MHx8MHx8fDI%3D" alt="Polestar Vehicle" class="manufacturer-image">
+                        <h3>Polestar</h3>
+                        <p>Users can access detailed information on vehicle models, including specifications, pricing, and availability. The site also offers tools for vehicle configuration and locating nearby dealerships.</p>
+                        <a href="https://www.polestar.com/uk" target="_blank" rel="noopener noreferrer" class="manufacturer-link">Visit Website</a>
+                    </div>
+
+                    <div class="manufacturer-card">
+                        <img src="https://images.unsplash.com/photo-1546518071-fddcdda7580a?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BMW Electric Vehicle" class="manufacturer-image">
+                        <h3>MERCEDES-BENZ</h3>
+                        <p>Users can explore detailed vehicle specifications, configure models, and locate nearby dealerships. The site also provides information on financing options and service appointments.</p>
+                        <a href="https://shop.mercedes-benz.co.uk/" target="_blank" rel="noopener noreferrer" class="manufacturer-link">Visit Website</a>
+                    </div>
+
+                    <div class="manufacturer-card">
+                        <img src="https://images.unsplash.com/photo-1568074532275-b57393b08c64?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGV4dXN8ZW58MHx8MHx8fDA%3D" alt="BMW Electric Vehicle" class="manufacturer-image">
+                        <h3>LEXUS</h3>
+                        <p>Users can access detailed vehicle specifications, configure models, and locate nearby dealerships. The site also provides information on financing options and service.</p>
+                        <a href="https://www.lexus.co.uk/" target="_blank" rel="noopener noreferrer" class="manufacturer-link">Visit Website</a>
+                    </div>
+
+                    <div class="manufacturer-card">
+                        <img src="https://images.unsplash.com/photo-1604108415419-6d4bd73a1c2c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZvcmR8ZW58MHx8MHx8fDA%3D" alt="BMW Electric Vehicle" class="manufacturer-image">
+                        <h3>FORD</h3>
+                        <p>The site offers straightforward navigation with clearly labeled sections, facilitating easy access to information on vehicle models, services, and dealership locations.</p>
+                        <a href="https://www.ford.co.uk/" target="_blank" rel="noopener noreferrer" class="manufacturer-link">Visit Website</a>
+                    </div>
+
+                    <div class="manufacturer-card">
+                        <img src="https://images.unsplash.com/photo-1576803636200-489c0e6b8147?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dG95b3RhfGVufDB8fDB8fHwy" alt="BMW Electric Vehicle" class="manufacturer-image">
+                        <h3>TOYOTA</h3>
+                        <p>The site offers clear navigation with well-organized sections, allowing users to easily find information on vehicle models, services, and dealership locations.</p>
+                        <a href="https://www.toyota.co.uk/" target="_blank" rel="noopener noreferrer" class="manufacturer-link">Visit Website</a>
+                    </div>
+
+                    <div class="manufacturer-card">
+                        <img src="https://images.unsplash.com/photo-1651915216757-1774c23ca5dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cm9sbHMlMjByb3lzfGVufDB8fDB8fHwy" alt="BMW Electric Vehicle" class="manufacturer-image">
+                        <h3>ROLLS-ROYCE</h3>
+                        <p>The site does not provide specific details about accessibility features, but it is designed with a focus on visual appeal and ease of navigation with good information.</p>
+                        <a href="https://www.rolls-roycemotorcars.com/" target="_blank" rel="noopener noreferrer" class="manufacturer-link">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="charging-info">
+                <h2>Charging Infrastructure</h2>
+                <div class="charging-grid">
+                    <div class="charging-card">
+                        <h3>Home Charging</h3>
+                        <p>Install a home charging station for convenient overnight charging.</p>
+                    </div>
+                    <div class="charging-card">
+                        <h3>Public Charging</h3>
+                        <p>Access to growing network of public charging stations.</p>
+                    </div>
+                    <div class="charging-card">
+                        <h3>Fast Charging</h3>
+                        <p>Rapid DC charging for long-distance travel.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charging Time Comparison Section -->
+            <div class="charging-comparison">
+                <h2>EV Charging Time Comparison</h2>
+                <div class="charging-types-grid">
+                    <div class="charging-type">
+                        <div class="charging-icon slow">⚡</div>
+                        <h3>Slow Charging (AC)</h3>
+                        <div class="charging-details">
+                            <p>3-8 hours for full charge</p>
+                            <ul>
+                                <li>Home charging point (7kW)</li>
+                                <li>Workplace charging</li>
+                                <li>Ideal for overnight charging</li>
+                            </ul>
+                            <div class="example">Example: BMW i4 (0-100%: 8.5h at 7kW)</div>
+                        </div>
+                    </div>
+                    <div class="charging-type">
+                        <div class="charging-icon fast">⚡⚡</div>
+                        <h3>Fast Charging (DC)</h3>
+                        <div class="charging-details">
+                            <p>30-60 minutes for 80%</p>
+                            <ul>
+                                <li>Public charging stations (50kW)</li>
+                                <li>Shopping centers & parking lots</li>
+                                <li>Perfect for top-ups during trips</li>
+                            </ul>
+                            <div class="example">Example: Kia EV6 (10-80%: 45min at 50kW)</div>
+                        </div>
+                    </div>
+                    <div class="charging-type">
+                        <div class="charging-icon ultra">⚡⚡⚡</div>
+                        <h3>Ultra-Fast Charging</h3>
+                        <div class="charging-details">
+                            <p>15-30 minutes for 80%</p>
+                            <ul>
+                                <li>High-power stations (150kW+)</li>
+                                <li>Highway service stations</li>
+                                <li>Ideal for long-distance travel</li>
+                            </ul>
+                            <div class="example">Example: Tesla Model 3 (10-80%: 20min at 250kW)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Comparison Table -->
+            <div class="vehicle-comparison">
+                <h2>EV Model Comparison</h2>
+                <div class="table-controls">
+                    <div class="search-filter">
+                        <input type="text" id="modelSearch" placeholder="Search models...">
+                        <select id="filterCategory">
+                            <option value="all">All Categories</option>
+                            <option value="suv">SUV</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="hatchback">Hatchback</option>
+                        </select>
+                    </div>
+                    <div class="sort-controls">
+                        <button class="sort-btn" data-sort="range">Sort by Range</button>
+                        <button class="sort-btn" data-sort="price">Sort by Price</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th data-tooltip="Maximum distance on a single charge">Range (mi)</th>
+                                <th data-tooltip="Starting price before incentives">Price (£)</th>
+                                <th data-tooltip="Time to charge from 10% to 80%">Fast Charging</th>
+                                <th data-tooltip="Energy consumption per mile">Efficiency</th>
+                            </tr>
+                        </thead>
+                        <tbody id="comparisonTableBody">
+                            <!-- Table rows will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Collapsible Specifications -->
+            <div class="specs-section">
+                <h2>Detailed Specifications</h2>
+                <div class="collapsible-panels">
+                    <div class="panel">
+                        <button class="panel-header">
+                            <span>⚡ Charging Types</span>
+                            <span class="panel-icon">+</span>
+                        </button>
+                        <div class="panel-content">
+                            <ul class="specs-list">
+                                <li>Type 2 (AC) - Standard home charging</li>
+                                <li>CCS (DC) - Fast charging standard</li>
+                                <li>CHAdeMO - Alternative fast charging</li>
+                                <li>Tesla Supercharger - Proprietary network</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <button class="panel-header">
+                            <span>🔋 Battery Technology</span>
+                            <span class="panel-icon">+</span>
+                        </button>
+                        <div class="panel-content">
+                            <ul class="specs-list">
+                                <li>Lithium-ion (most common)</li>
+                                <li>Solid-state (upcoming)</li>
+                                <li>Battery degradation factors</li>
+                                <li>Temperature management</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <button class="panel-header">
+                            <span>📊 Performance Metrics</span>
+                            <span class="panel-icon">+</span>
+                        </button>
+                        <div class="panel-content">
+                            <ul class="specs-list">
+                                <li>Acceleration (0-60 mph)</li>
+                                <li>Top speed limitations</li>
+                                <li>Power output (kW)</li>
+                                <li>Torque delivery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>EcoDrive</h4>
+                <p>Driving towards a sustainable future</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/views/index.html">Home</a></li>
+                    <li><a href="/views/about.html">About Us</a></li>
+                    <li><a href="/views/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Visit our Facebook page"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 EcoDrive. All rights reserved by Dev Patel.</p>
+        </div>
+    </footer>
+
+    <script src="../Backend/script.js"></script>
+    <script src="../Backend/vehicles.js"></script>
+</body>
+</html>

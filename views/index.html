@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for SEO and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoDrive - Your comprehensive guide to electric and hybrid vehicles. Discover sustainable transportation options and join the eco-friendly revolution.">
+    <meta name="keywords" content="electric vehicles, hybrid cars, EV, sustainable transport, eco-friendly cars">
+    <meta name="author" content="Dev Patel">
+    <title>EcoDrive - Your Guide to Electric & Hybrid Vehicles</title>
+    
+    <!-- External CSS - Main stylesheet -->
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <!-- External CSS - Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="../Backend/auth.js" defer></script>
+</head>
+<body>
+    <!-- Custom cursor element -->
+    <div id="custom-cursor"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-brand" role="banner">EcoDrive</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="hamburger" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu" role="menubar">
+            <li role="none"><a href="/views/index.html" class="active" role="menuitem" aria-current="page">Home</a></li>
+            <li role="none"><a href="/views/about.html" role="menuitem">About Us</a></li>
+            <li role="none"><a href="/views/vehicles.html" role="menuitem">EV & PHEV</a></li>
+            <li role="none"><a href="/views/login.html" role="menuitem">Login</a></li>
+            <li role="none"><a href="/views/contact.html" role="menuitem">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Inline CSS -->
+    <!-- Demonstrates inline CSS usage with style attribute -->
+    <header class="hero" role="banner" style="background: linear-gradient(135deg, #00c896 0%, #4d7cff 100%);">
+        <div class="hero-content" style="text-align: center; padding: 100px 20px;">
+            <!-- Inline CSS for heading -->
+            <h1 class="fade-in" style="color: #ffffff; font-size: 3.5em; margin-bottom: 20px;">Drive the Future</h1>
+            <p class="fade-in">Discover the world of electric and hybrid vehicles. Join the sustainable transportation revolution.</p>
+            <a href="vehicles.html" class="cta-button fade-in" role="button">Explore Vehicles</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main role="main">
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us" aria-labelledby="why-choose-title">
+            <h2 id="why-choose-title" class="section-title fade-in">Why Choose Us?</h2>
+            <div class="features-grid">
+                <article class="feature-card slide-in" data-delay="0">
+                    <div class="feature-icon" aria-hidden="true">💰</div>
+                    <h3>Cost Savings</h3>
+                    <p>Save up to 60% on fuel costs compared to traditional vehicles. Plus, benefit from government incentives and tax rebates.</p>
+                </article>
+                <article class="feature-card slide-in" data-delay="200">
+                    <div class="feature-icon" aria-hidden="true">🌍</div>
+                    <h3>Environmental Impact</h3>
+                    <p>Reduce your carbon footprint and contribute to a sustainable future with zero-emission vehicles.</p>
+                </article>
+                <article class="feature-card slide-in" data-delay="400">
+                    <div class="feature-icon" aria-hidden="true">⚡</div>
+                    <h3>Government Incentives</h3>
+                    <p>Take advantage of various government grants, tax benefits, and incentives for electric vehicle adoption.</p>
+                </article>
+                <article class="feature-card slide-in" data-delay="600">
+                    <div class="feature-icon" aria-hidden="true">🔧</div>
+                    <h3>Lower Maintenance</h3>
+                    <p>Fewer moving parts mean lower maintenance costs and increased reliability over time.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits" aria-labelledby="benefits-title">
+            <h2 id="benefits-title">Why Choose Electric?</h2>
+            <div class="benefits-grid">
+                <article class="benefit-card slide-in">
+                    <div class="icon" aria-hidden="true">🌿</div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Zero emissions for a cleaner environment</p>
+                </article>
+                <article class="benefit-card slide-in">
+                    <div class="icon" aria-hidden="true">💰</div>
+                    <h3>Cost-Effective</h3>
+                    <p>Lower running and maintenance costs</p>
+                </article>
+                <article class="benefit-card slide-in">
+                    <div class="icon" aria-hidden="true">⚡</div>
+                    <h3>Performance</h3>
+                    <p>Instant torque and smooth acceleration</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="featured" aria-labelledby="featured-title">
+            <h2 id="featured-title">Featured Vehicles</h2>
+            <div class="vehicle-slider">
+                <article class="vehicle-card">
+                    <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800" alt="Pure electric vehicle showcasing modern design" loading="lazy">
+                    <h3>Pure Electric</h3>
+                    <p>100% electric power, zero emissions</p>
+                </article>
+                <article class="vehicle-card">
+                    <img src="https://images.unsplash.com/photo-1571987502227-9231b837d92a?auto=format&fit=crop&w=800" alt="Plug-in hybrid vehicle showing dual power capabilities" loading="lazy">
+                    <h3>Plug-in Hybrid</h3>
+                    <p>Best of both worlds</p>
+                </article>
+                <article class="vehicle-card">
+                    <img src="https://images.unsplash.com/photo-1576803636200-489c0e6b8147?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dG95b3RhfGVufDB8fDB8fHwy" alt="Hybrid vehicle demonstrating efficient design" loading="lazy">
+                    <h3>Hybrid</h3>
+                    <p>Efficient and practical</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <section class="footer-section">
+                <h4>EcoDrive</h4>
+                <p>Driving towards a sustainable future</p>
+            </section>
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/views/about.html">About Us</a></li>
+                    <li><a href="/views/vehicles.html">Vehicles</a></li>
+                    <li><a href="/views/contact.html">Contact</a></li>
+                </ul>
+            </section>
+            <section class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Visit our Facebook page"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <time datetime="2025">2025</time> EcoDrive. All rights reserved by Dev Patel.</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="../Backend/script.js" defer></script>
+</body>
+</html>
